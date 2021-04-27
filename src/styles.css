@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0 !important;
+}
+
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('./assets/fonts/DS-DIGI.TTF') format('truetype');
+}
