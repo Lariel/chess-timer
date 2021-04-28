@@ -1,3 +1,11 @@
-Informe quantos minutos cada jogador terá no total:
-<input type="number" min="5" max="60" [(ngModel)]=tempoMaximoMinutos>
-<button (click)="confirmarTempo()">Confirmar</button>
+<section class="configurar">
+
+  <span>Quantos minutos cada jogador terá?</span>
+
+  <input type="number" min="5" max="60" [(ngModel)]=tempoMaximoMinutos>
+
+  <div class="play">
+    <mat-icon (click)="confirmarTempo()">not_started</mat-icon>
+  </div>
+
+</section>

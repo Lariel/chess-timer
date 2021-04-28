@@ -19,12 +19,13 @@ export class ConfigurarJogoComponent implements OnInit {
   }
 
   confirmarTempo = () => {
-    this.tempoMaximoSegundos = this.converterMinutosParaSegundos(this.tempoMaximoMinutos);
-    console.log('Tempo maximo: ', this.tempoMaximoSegundos);
-    this.router.navigate(['/jogo'], { queryParams: {
-        timer: this.tempoMaximoSegundos
-      }
-    });
+    if (this.tempoMaximoMinutos > 0) {
+      this.tempoMaximoSegundos = this.converterMinutosParaSegundos(this.tempoMaximoMinutos);
+      this.router.navigate(['/jogo'], { queryParams: {
+          timer: this.tempoMaximoSegundos
+        }
+      });
+    }
   }
 
   converterMinutosParaSegundos = (t: number): number => {

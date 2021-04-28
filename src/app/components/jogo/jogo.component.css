@@ -6,6 +6,21 @@
   height: 100vh;
 }
 
+.timeout:not(.goHome) {
+  animation: blink-animation .5s steps(3, start) infinite;
+  -webkit-animation: blink-animation .5s steps(3, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
 .tempoA, .tempoB {
   font-size: 125px;
   color: #007C2A;
@@ -34,14 +49,36 @@
   align-content: center;
 }
 
-.btnTrocar {
-  font-size: 80px;
-  z-index: 2;
-}
-
 .switch{
   font-size: 80px;
   z-index: 2;
+  border-radius: 50%;
+  border-color: red;
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14),
+              0 11px 15px -7px rgba(0, 0, 0, 0.12),
+              0 24px 38px 3px rgba(0, 0, 0, 0.2);
+
+  transform: rotate(90deg);
+  transition: .4s;
+}
+
+.reverse {
+  transform: rotate(270deg);
+  transition: .4s;
+}
+
+.mat-icon {
+  font-size: 150px;
+}
+
+.goHome {
+  font-size: 80px;
+  z-index: 3;
   border-radius: 50%;
   border-color: red;
   background-color: red;

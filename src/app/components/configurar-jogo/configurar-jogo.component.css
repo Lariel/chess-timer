@@ -1,0 +1,31 @@
+.configurar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.play {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.mat-icon {
+  font-size: 70px;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+input {
+  width: 150px;
+  height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+}

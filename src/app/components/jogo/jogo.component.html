@@ -1,10 +1,23 @@
-<div class="jogo">
-  <div class="ladoB">
+<section class="jogo"
+  [ngClass]="{
+    'timeout': timeout
+  }">
+  <section class="ladoB">
     <span class="tempoB">{{tempoAtualSegundosB | minuteSeconds}}</span>
+  </section>
+  <div *ngIf="!timeout" class="switch"
+    [ngClass]="{
+      'reverse': contandoAeNaoB
+    }"
+    (click)="trocarTimmer()">
+    <mat-icon>change_circle</mat-icon>
   </div>
-  <div class="switch" (click)="trocarTimmer()"></div>
-  <div class="ladoA">
+  <div *ngIf="timeout" class="goHome"
+    (click)="goHome()">
+    <mat-icon>home</mat-icon>
+  </div>
+  <section class="ladoA">
     <span class="tempoA">{{tempoAtualSegundosA | minuteSeconds}}</span>
-  </div>
-</div>
+  </section>
+</section>
 

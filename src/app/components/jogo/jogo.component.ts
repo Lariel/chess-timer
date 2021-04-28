@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-jogo',
@@ -14,19 +14,30 @@ export class JogoComponent implements OnInit {
   contandoAeNaoB = false;
   timerA;
   timerB;
-  umSegundo = 1000;
+  umSegundo = 1000; // milisegundos
+  timeout = false;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
     this.tempoMaximoSegundos = this.route.snapshot.queryParamMap.get('timer');
+    if (!+this.tempoMaximoSegundos) {
+      this.router.navigate(['/']);
+    }
+  }
+
+  goHome = () => {
+    this.router.navigate(['/']);
   }
 
   trocarTimmer  = () => {
-    this.contandoAeNaoB = !this.contandoAeNaoB;
-    this.contar();
+    if (!this.timeout) {
+      this.contandoAeNaoB = !this.contandoAeNaoB;
+      this.contar();
+    }
   }
 
   contar = () => {
@@ -36,6 +47,7 @@ export class JogoComponent implements OnInit {
   jogarA(): void {
     if (this.tempoAtualSegundosA >= this.tempoMaximoSegundos) {
       clearTimeout(this.timerA);
+      this.timeout = true;
       return;
     } else {
       clearTimeout(this.timerB);
@@ -49,6 +61,7 @@ export class JogoComponent implements OnInit {
   jogarB(): void {
     if (this.tempoAtualSegundosB >= this.tempoMaximoSegundos) {
       clearTimeout(this.timerB);
+      this.timeout = true;
       return;
     } else {
       clearTimeout(this.timerA);
