@@ -1,6 +1,13 @@
 # CronometroXadrez
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+[![Build Status](https://github.com/Lariel/chess-timer/actions/workflows/firebase-hosting-pull-request.yml/badge.svg)](https://cronometro-xadrez.web.app/)
+
+[![Angular version](https://img.shields.io/badge/Angular-v11.2.11-DD0031?style=flat&logo=angular&logoColor=DD0031)](https://angular.io/)
+[![NPM version](https://img.shields.io/badge/npm-v6.14.12-blue.svg?style=flat)](http://nodejs.org/download/)
+[![Node version](https://img.shields.io/badge/node-v14.16.1-lithgreen.svg?style=flat)](http://nodejs.org/download/) 
+
+
+
 
 ## Development server
 
