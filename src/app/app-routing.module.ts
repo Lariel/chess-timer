@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'jogo',
     component: JogoComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'novo-jogo',
   }
 ];
 
