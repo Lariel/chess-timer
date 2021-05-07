@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -20,17 +21,19 @@ export class JogoComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
     this.tempoMaximoSegundos = this.route.snapshot.queryParamMap.get('timer');
     if (!+this.tempoMaximoSegundos) {
-      this.router.navigate(['/']);
+      this.goHome();
     }
   }
 
   goHome = () => {
     this.router.navigate(['/']);
+    this.titleService.setTitle('Novo jogo - Cronômetro Xadrez');
   }
 
   trocarTimmer  = () => {

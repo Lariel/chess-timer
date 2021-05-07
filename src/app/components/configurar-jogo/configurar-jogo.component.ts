@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,6 +11,7 @@ export class ConfigurarJogoComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private titleService: Title
   ) { }
 
   tempoMaximoMinutos;
@@ -25,6 +27,7 @@ export class ConfigurarJogoComponent implements OnInit {
           timer: this.tempoMaximoSegundos
         }
       });
+      this.titleService.setTitle('Jogando - Cronômetro Xadrez');
     }
   }
 

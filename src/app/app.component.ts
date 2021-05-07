@@ -1,8 +1,9 @@
 import { NavigationEnd, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { filter } from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
 
-declare var gtag;
+declare let gtag: Function;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,6 +23,5 @@ export class AppComponent {
       });
     });
   }
-
 
 }
