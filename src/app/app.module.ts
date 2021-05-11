@@ -8,6 +8,8 @@ import { ConfigurarJogoComponent } from './components/configurar-jogo/configurar
 import { JogoComponent } from './components/jogo/jogo.component';
 import { FormsModule } from '@angular/forms';
 import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,13 @@ import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
