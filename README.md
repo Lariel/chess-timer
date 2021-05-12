@@ -16,7 +16,15 @@
 
 [Material Icons](https://fonts.google.com/icons)
 
-### Desenvolvimento
+[Maskable.app](https://maskable.app/editor)
+
+[Photopea](https://www.photopea.com/)
+
+[ConvertIo](https://convertio.co/pt/)
+
+### Desenvolvimento e deploy
+[VS Code](https://code.visualstudio.com/)
+
 [Angular 11](https://angular.io/)
 
 [Firebase](https://firebase.google.com/docs/build)
