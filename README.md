@@ -7,6 +7,27 @@
 [![Node version](https://img.shields.io/badge/node-v14.16.1-lithgreen.svg?style=flat)](http://nodejs.org/download/) 
 
 
+## Ferramentas / Tecnologias utilizadas:
+
+### Design e prototipação
+[Figma - Layout geral](https://www.figma.com/file/pSkliX2EMjF0XxUwQl6D0Y/Cron%C3%B4metro-Xadrez?node-id=0%3A1)
+
+[Figma - Ícones](https://www.figma.com/file/pSkliX2EMjF0XxUwQl6D0Y/?node-id=23%3A0)
+
+[Material Icons](https://fonts.google.com/icons)
+
+### Desenvolvimento
+[Angular 11](https://angular.io/)
+
+[Firebase](https://firebase.google.com/docs/build)
+
+[GitHub Actions](https://docs.github.com/en/actions/reference)
+
+
+## Referências:
+[PWA Docs](https://web.dev/progressive-web-apps/)
+
+[Adaptive icon support in PWAs with maskable icons](https://web.dev/maskable-icon/?utm_source=devtools)
 
 
 ## Development server
