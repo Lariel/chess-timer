@@ -3,7 +3,7 @@
   "short_name": "Chess timer",
   "description": "Cronômetro para partidas de xadrez",
   "theme_color": "#A36A6A",
-  "background_color": "#fffff",
+  "background_color": "#fff",
   "orientation": "portrait",
   "display": "standalone",
   "scope": "./",
