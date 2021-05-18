@@ -6,6 +6,9 @@
 [![NPM version](https://img.shields.io/badge/npm-v6.14.12-blue.svg?style=flat)](http://nodejs.org/download/)
 [![Node version](https://img.shields.io/badge/node-v14.16.1-lithgreen.svg?style=flat)](http://nodejs.org/download/) 
 
+<img src="./pictures/capture-gameplay.gif" />
+
+**Obs:** *Tempo acelerado para fins demonstrativos*
 
 ## Ferramentas / Tecnologias utilizadas:
 
