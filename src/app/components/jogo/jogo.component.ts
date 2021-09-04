@@ -1,7 +1,6 @@
 import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
 @Component({
   selector: 'app-jogo',
   templateUrl: './jogo.component.html',
@@ -36,7 +35,7 @@ export class JogoComponent implements OnInit {
     this.titleService.setTitle('Novo jogo - Cronômetro Xadrez');
   }
 
-  trocarTimmer  = () => {
+  trocarTimmer = () => {
     if (!this.timeout) {
       this.contandoAeNaoB = !this.contandoAeNaoB;
       this.contar();
@@ -51,6 +50,7 @@ export class JogoComponent implements OnInit {
     if (this.tempoAtualSegundosA >= this.tempoMaximoSegundos) {
       clearTimeout(this.timerA);
       this.timeout = true;
+      this.playAudio();
       return;
     } else {
       clearTimeout(this.timerB);
@@ -65,6 +65,7 @@ export class JogoComponent implements OnInit {
     if (this.tempoAtualSegundosB >= this.tempoMaximoSegundos) {
       clearTimeout(this.timerB);
       this.timeout = true;
+      this.playAudio();
       return;
     } else {
       clearTimeout(this.timerA);
@@ -73,6 +74,12 @@ export class JogoComponent implements OnInit {
         this.contar();
       }, this.umSegundo);
     }
+  }
+
+  playAudio(): void {
+    const audio = new Audio('../../../assets/audio/stopwatch.wav');
+    audio.load();
+    audio.play();
   }
 
 }
