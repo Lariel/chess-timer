@@ -9,3 +9,10 @@
   </div>
 
 </section>
+
+<section *ngIf="historicoPartidas.length > 0" class="historico">
+  <span>Últimas partidas</span>
+  <div *ngFor="let partida of historicoPartidas">
+    <div (click)="selecionarTempoDoHistorico(partida.tempoMaximoMinutos)" class="partida-historico">{{partida.tempoMaximoMinutos}} minutos</div>
+  </div>
+</section>
