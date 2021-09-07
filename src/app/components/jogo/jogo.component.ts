@@ -37,6 +37,7 @@ export class JogoComponent implements OnInit {
 
   trocarTimmer = () => {
     if (!this.timeout) {
+      this.playSwitch();
       this.contandoAeNaoB = !this.contandoAeNaoB;
       this.contar();
     }
@@ -50,7 +51,7 @@ export class JogoComponent implements OnInit {
     if (this.tempoAtualSegundosA >= this.tempoMaximoSegundos) {
       clearTimeout(this.timerA);
       this.timeout = true;
-      this.playAudio();
+      this.playEnd();
       return;
     } else {
       clearTimeout(this.timerB);
@@ -65,7 +66,7 @@ export class JogoComponent implements OnInit {
     if (this.tempoAtualSegundosB >= this.tempoMaximoSegundos) {
       clearTimeout(this.timerB);
       this.timeout = true;
-      this.playAudio();
+      this.playEnd();
       return;
     } else {
       clearTimeout(this.timerA);
@@ -76,8 +77,17 @@ export class JogoComponent implements OnInit {
     }
   }
 
-  playAudio(): void {
-    const audio = new Audio('../../../assets/audio/stopwatch.wav');
+  playSwitch(): void {
+    const audio = new Audio('../../../assets/audio/switch.wav');
+    this.playAudio(audio);
+  }
+
+  playEnd(): void {
+    const audio = new Audio('../../../assets/audio/end.wav');
+    this.playAudio(audio);
+  }
+
+  playAudio(audio): void {
     audio.load();
     audio.play();
   }

@@ -4,7 +4,7 @@
   align-items: center;
   height: 100vh;
 }
-
+/*
 .timeout:not(.goHome) {
   animation: blink-animation .5s steps(3, start) infinite;
   -webkit-animation: blink-animation .5s steps(3, start) infinite;
@@ -18,7 +18,7 @@
   to {
     visibility: hidden;
   }
-}
+} */
 
 .tempoA, .tempoB {
   font-size: 125px;
@@ -48,7 +48,8 @@
   align-content: center;
 }
 
-.switch{
+.switch {
+  cursor: pointer;
   font-size: 80px;
   z-index: 2;
   border-radius: 50%;
@@ -76,6 +77,7 @@
 }
 
 .goHome {
+  cursor: pointer;
   font-size: 80px;
   z-index: 3;
   border-radius: 50%;
