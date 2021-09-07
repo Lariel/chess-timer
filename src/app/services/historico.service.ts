@@ -14,8 +14,12 @@ export class HistoricoService {
   public atualizarHistorico(partida: Partida): void {
     const historico: Partida[] = this.state.obterState('historico') ? this.state.obterState('historico') : [];
 
+    if (historico.length === 5) {
+      historico.pop();
+    }
+
     if (historico.every(p => p.tempoMaximoMinutos !== partida.tempoMaximoMinutos)) {
-      historico.push(partida);
+      historico.unshift(partida);
     }
 
     this.state.atualizarState('historico', historico);
